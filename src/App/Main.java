@@ -1,3 +1,15 @@
+package App;
+
+
+import Model.Figure;
+import Model.Rectangle;
+import Model.Square;
+import Model.Triangle;
+
+import Enum.Color;
+
+
+
 public class Main {
     public static void main(String[] args) {
         Triangle triangle = new Triangle('*', Color.RED, 7, 3);
@@ -6,9 +18,9 @@ public class Main {
         Rectangle rectangle1 = new Rectangle('/', Color.GRAY, 8, 5);
         Square square = new Square('#', Color.WHITE, 4);
         Square square1 = new Square('$', Color.GREEN, 5);
-        square1.drawFigure(square1.getSymbol());
-        square1.paintFigure(Color.BLUE);
-        triangle.drawFigure(triangle.getSymbol());
+        square1.drawFigure();
+        square1.paintFigure();
+        triangle.drawFigure();
 
         rectangle.figureArea();
         triangle.figureArea();
@@ -16,7 +28,7 @@ public class Main {
 
         Figure figure = new Rectangle('§', Color.BLACK, 3, 6);
         figure.figureArea();
-        figure.drawFigure(figure.getSymbol());
+        figure.drawFigure();
 
         Figure[] figures = new Figure[6];
         figures[0] = triangle;

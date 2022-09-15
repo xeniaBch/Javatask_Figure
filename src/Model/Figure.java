@@ -1,4 +1,9 @@
-public class Figure{
+package Model;
+import Enum.Color;
+import Interface.Artist;
+import Interface.Painter;
+
+public class Figure implements Painter, Artist {
 
     private char symbol;
     private Color color;
@@ -28,11 +33,11 @@ public class Figure{
         System.out.println("Calculate Square of Figure");
     }
 
-    public void drawFigure(char a){
+    public void drawFigure(){
 
     }
 
-    public void paintFigure(Color color){
+    public void paintFigure(){
 
     }
 
