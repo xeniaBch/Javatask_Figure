@@ -10,15 +10,12 @@ public class Main {
         test[0]=new Book("Animal Farm");
         test[1]=new Magazine("Guardian");
         test[2]=new Book("Le Petit Prince");
-        test[2].print();
-        for(int k=0; k<3; k++){
-            if   (test[k] instanceof Magazine){
-                Magazine.printMagazines(test);
-            } else {
-                Book.printBooks(test);
-            }
+
+        Magazine.printMagazines(test);
+        Book.printBooks(test);
+
         }
 
 
 
-    }}
+    }
