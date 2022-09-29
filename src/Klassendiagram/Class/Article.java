@@ -12,6 +12,11 @@ public abstract class Article implements Comparable<Article> {
 
     @Override
     public int compareTo(Article article) {
+        if(getEuroInventory() > article.getEuroInventory()) {
+            return 1;
+        } else if (getEuroInventory() < article.getEuroInventory()) {
+            return -1;
+        }
         return 0;
     }
 

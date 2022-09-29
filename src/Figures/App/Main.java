@@ -42,6 +42,8 @@ public class Main {
             System.out.println("Square of " + value.getClass().getName() + " is " + value.figureArea());
         }*/
 
+        //Написать Comporator для  FigureProjekt  таким образом, что бы он сортировал фигуры в соответствии с их площадью.
+
         List<Figure> figures = new ArrayList<>();
         figures.add(triangle1);
         figures.add(triangle);
