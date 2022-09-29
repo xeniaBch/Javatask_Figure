@@ -1,6 +1,6 @@
 package Klassendiagram.Class;
 
-public abstract class Article {
+public abstract class Article implements Comparable<Article> {
 
     private String name;
     private double price;
@@ -8,6 +8,11 @@ public abstract class Article {
     public Article(String name, double price) {
         this.name = name;
         this.price = price;
+    }
+
+    @Override
+    public int compareTo(Article article) {
+        return 0;
     }
 
     public String getName() {
@@ -33,6 +38,7 @@ public abstract class Article {
         return "Article{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
+                "sum to pay" + getEuroInventory() +
                 '}';
     }
 }

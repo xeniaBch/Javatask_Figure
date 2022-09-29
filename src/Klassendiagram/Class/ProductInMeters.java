@@ -1,6 +1,6 @@
 package Klassendiagram.Class;
 
-public class ProductInMeters extends Article{
+public class ProductInMeters extends Article {
 
     private int width;
     private int length;
@@ -29,18 +29,31 @@ public class ProductInMeters extends Article{
 
     @Override
     public double getEuroInventory(){
-        return 0.0;
+
+        return getMetrInventory()*getPrice();
     }
 
     @Override
     public String toString() {
-        return "ProductInMeters{" +
-                "width=" + width +
+        return '{' + getName() +
+                " width=" + width +
                 ", length=" + length +
-                '}';
+                ", price=" + getPrice() +
+                " sum to pay = " + getEuroInventory() +
+                '}'+ '\n';
     }
 
     public double getMetrInventory(){
-        return 0.0;
+        return width*length;
+    }
+
+    @Override
+    public int compareTo(Article article) {
+        if(getEuroInventory() > article.getEuroInventory()) {
+            return 1;
+        } else if (getEuroInventory() < article.getEuroInventory()) {
+            return -1;
+        }
+        return 0;
     }
 }
