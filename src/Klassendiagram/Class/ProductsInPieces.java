@@ -36,13 +36,5 @@ public class ProductsInPieces extends Article{
         return amount*getPrice();
     }
 
-    @Override
-    public int compareTo(Article article) {
-        if(getEuroInventory() > article.getEuroInventory()) {
-            return 1;
-        } else if (getEuroInventory() < article.getEuroInventory()) {
-            return -1;
-        }
-        return 0;
-    }
+
 }
